@@ -1,0 +1,7 @@
+{
+  "name": "inspirationpoint",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

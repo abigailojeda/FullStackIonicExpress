@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ideas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item *ngFor="let idea of ideas">
+<ion-label>
+  <h1>{{idea.title}}</h1>
+  <p>{{idea.description}}</p>
+</ion-label>
+</ion-item>
+</ion-content>
