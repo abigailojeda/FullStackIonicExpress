@@ -1,106 +1,89 @@
-# Título del Proyecto
+# ✨ Inspiration Point ✨
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Una aplicación en la que poder compartir esas ideas que se te ocurren en un momento de inspiración pero no tienes tiempo o recursos para llevarla a cabo.
+Compártela con el mundo para que alguien pueda hacerla realidad, o explora y descubre ideas que la gente ha compartido y que puedes llevar a cabo
+## 💾 Descarga el proyecto
 
-## Comenzando 🚀
+Crea una carpeta para el proyecto y ejecuta:
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+git clone https://github.com/abigailojeda/FullStackIonicExpress.git .
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Con el "." del final especificas que quieres que el proyecto se clone dentro de esa carpeta, y no que cree una carpeta nueva para clonarse
 
 
-### Pre-requisitos 📋
+## 📂 ¿Qué necesitas tener instalado en tu ordenador?
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+NodeJS, versión LTS  [Enlace a Node](https://nodejs.org/en/)
 
-```
-Da un ejemplo
-```
+Ionic: 
+npm install -g @ionic/cli
 
-### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+## ⚙️ Configuración del proyecto
 
-_Dí cómo será ese paso_
+### backend
+En la carpeta back( cd back), instala las dependencias:
+npm install
 
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
+IMPORTANTE:
+Debes crear una base de datos en local, esta es la configuración:
+```javascript
+// back/config/db-config.js
+module.exports = {
+  HOST: "localhost",
+  USER: "root",
+  PASSWORD: "",
+  DB: "inspiration_point",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+}
 
 ```
-Da un ejemplo
+
+En caso de que tu front no se ejecute en el puerto 8100, deberás cambiarlo aquí:
+
+```javascript
+// back/index.js linea 6
+ let corsOptions = {
+  origin: 'http://localhost:8100'
+}
 ```
 
-## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+### frontend
+En la carpeta front( cd front), instala las dependencias:
+npm install
 
-## Construido con 🛠️
+IMPORTANTE:
+En caso de que tu back no se ejecute en el puerto 8080, deberás cambiarlo aquí:
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+```javascript
+// front/src/app/services/idea.service.ts linea 8
+  endpoint = 'http://localhost:8080/api/idea'
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
+<!-- 
 ## Wiki 📖
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki) -->
 
-## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
+<!-- ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
 * Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
+* etc. -->
 
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+ 🙋🏻‍♀️ [Abigail Ojeda Alonso](https://es.linkedin.com/in/abigail-ojeda)

@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors"); 
 
 const app = express();
+
 let corsOptions = {
   origin: 'http://localhost:8100'
 }
@@ -22,11 +23,9 @@ const db = require("./models");
  });
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bicycles application Juan De Dios."});
+  res.json({ message: "Welcome to bicycles application Inspiration Point."});
 });
-// app.get("/soyguay", (req, res) => {
-//   res.json({ message: "Soy muy super guay"});
-// });
+
 
 require("./routes/idea.route")(app);
 
