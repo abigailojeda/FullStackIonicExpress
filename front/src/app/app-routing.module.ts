@@ -15,6 +15,23 @@ const routes: Routes = [
     path: 'ideas',
     loadChildren: () => import('./ideas/ideas.module').then( m => m.IdeasPageModule)
   },
+ 
+  {
+    path: 'nav',
+    loadChildren: () => import('./shared/nav/nav.module').then( m => m.NavPageModule)
+  },
+  {
+    path: 'header',
+    loadChildren: () => import('./shared/header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'idea/:id',
+    loadChildren: () => import('./idea/idea.module').then( m => m.IdeaPageModule)
+  },
+  {
+    path: 'idea-create',
+    loadChildren: () => import('./idea-create/idea-create.module').then( m => m.IdeaCreatePageModule)
+  },
 ];
 
 @NgModule({

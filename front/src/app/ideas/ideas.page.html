@@ -1,14 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ideas</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+
+<ion-content >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/home" icon="chevron-back-outline">please</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 <ion-item *ngFor="let idea of ideas">
 <ion-label>
   <h1>{{idea.title}}</h1>
   <p>{{idea.description}}</p>
 </ion-label>
+
+<ion-button slot="end" shape="round" [routerLink]="['/idea/', idea.id]">
+
+Ver
+</ion-button>
+<ion-button class="delete-icon btn-end"  (click)="removeUser(idea.id)">
+  <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+</ion-button>
 </ion-item>
+
+
 </ion-content>
+
+
+<ion-footer >
+  <ion-toolbar class="myColor">
+   <h3 class="footer-text" [routerLink]="['/idea-create/']">Nueva Idea</h3>
+  </ion-toolbar>
+</ion-footer>

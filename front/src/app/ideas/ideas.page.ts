@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { IdeaService } from '../services/idea.service';
 
 @Component({
@@ -6,19 +6,35 @@ import { IdeaService } from '../services/idea.service';
   templateUrl: './ideas.page.html',
   styleUrls: ['./ideas.page.scss'],
 })
-export class IdeasPage implements OnInit {
+export class IdeasPage implements  AfterViewInit {
 
   public ideas:any = [];
   constructor(private ideaService:IdeaService) { }
 
-  ngOnInit() {
+
+  ngAfterViewInit(): void {
     this.getAllIdeas();
   }
+
+ionViewWillEnter(){
+  this.getAllIdeas();
+}
 
   getAllIdeas(){
     this.ideaService.getAllIdeas().subscribe(response=>{
       this.ideas = response;
     })
+  }
+
+  removeUser(id) {
+    if (window.confirm('Are you sure')) {
+      this.ideaService.deleteIdea(id)
+      .subscribe(() => {
+          console.log('¡Idea eliminada!')
+          this.getAllIdeas()
+        }
+      )
+    }
   }
 
 }

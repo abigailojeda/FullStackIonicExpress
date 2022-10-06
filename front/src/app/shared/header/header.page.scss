@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.title-cont{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   padding:45px 25px 25px 25px;
+   background-color: #dbcbff;
+   h1{
+    color: #515053;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 15px;
+   }
+
+   svg{
+    animation: star 5s ;
+   }
+ 
+}
+
+// @keyframes star{
+//     0%{
+//         transform: rotate(0);
+//     }
+//     15%{
+//         transform: rotate(15deg);
+//         fill: rgb(112, 112, 151);
+//     }
+//     30%{
+//         transform: rotate(30deg);
+//         fill: rgb(141, 141, 212);
+//     }
+//     45%{
+//         transform: rotate(45deg);
+//         fill: rgb(78, 78, 185);
+//     }
+//     60%{
+//         transform: rotate(60deg);
+//         fill: rgb(124, 78, 185);
+//     }
+//     75%{
+//         transform: rotate(75deg);
+//         fill: rgb(156, 76, 172);
+//     }
+//     100%{
+//         transform: rotate(360deg);
+//         fill: rgb(196, 96, 216);
+//     }
+// }
+
+
+@keyframes star{
+    0%{
+        transform: rotate(0);
+    }
+   
+    100%{
+        transform: rotate(360deg);
+    }
+}

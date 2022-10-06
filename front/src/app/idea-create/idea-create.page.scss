@@ -1,0 +1,31 @@
+ion-content {
+    --padding-top: 60px;
+  }
+
+.edit-icon{
+  --padding-start:75px;
+  --padding-end:75px;
+  --background: #6039bd;
+  --background-hover: #6039bd;
+  --background-activated: #6039bd;
+  --background-focused: #6039bd;
+}
+
+.save-icon{
+  --padding-start:75px;
+  --padding-end:75px;
+  --background: #3ccdab;
+  --background-hover: #3ccdab;
+  --background-activated: #3ccdab;
+  --background-focused: #3ccdab;
+}
+
+
+.text-item{
+  min-height: 110px;
+  max-height: 200px;
+}
+ion-textarea{
+  min-height: 110px;
+  max-height: 200px;
+}
