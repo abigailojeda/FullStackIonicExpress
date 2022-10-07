@@ -56,7 +56,7 @@ En caso de que tu front no se ejecute en el puerto 8100, deberás cambiarlo aqu�
 
 #### 👨‍🚀 prueba los endpoints con POSTMAN
 
-[![Run in Postman](https://documenter.getpostman.com/view/18449118/2s83zgu52z)
+[Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/18449118-74e2d313-f4c4-486b-8daa-59e9c377384a?action=collection%2Ffork&collection-url=entityId%3D18449118-74e2d313-f4c4-486b-8daa-59e9c377384a%26entityType%3Dcollection%26workspaceId%3Dab713d30-9a13-469c-8c13-72ca4aea76e0)
 
 ### frontend
 En la carpeta front( cd front), instala las dependencias:
